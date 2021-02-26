@@ -1,0 +1,12 @@
+version: "3"
+services:
+  nginx:
+    build: .
+    ports:
+      - "8001:80"
+    volumes:
+      - ./overwrite:/overwrite
+        #- ./html:/usr/share/nginx
+    environment:
+      - OWNER=1001
+      - GROUP=1001
