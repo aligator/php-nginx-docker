@@ -24,6 +24,7 @@ RUN apk add --no-cache --update-cache \
 
 COPY supervisord.ini /etc/supervisor.d/supervisord.ini
 COPY ./overwrite/php/fpm-pool.conf /etc/php7/php-fpm.d/yyy_fpm-pool.conf
+COPY ./overwrite/php/php.ini /etc/php7/conf.d/zz_custom.ini
 COPY ./overwrite/nginx/nginx.conf /etc/nginx/nginx.conf
 COPY ./overwrite/nginx/default.conf /etc/nginx/conf.d/default.conf
 
