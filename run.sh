@@ -30,10 +30,10 @@ if [ -f ${CONFIG_DIR}/nginx/default.conf ]; then
 fi
 
 if [ -f ${CONFIG_DIR}/php/fpm-pool.conf ]; then
-  cp ${CONFIG_DIR}/php/fpm-pool.conf /etc/php7/php-fpm.d/zz_custom.conf
+  cp ${CONFIG_DIR}/php/fpm-pool.conf /etc/php82/php-fpm.d/zz_custom.conf
 fi
 if [ -f ${CONFIG_DIR}/php/php.ini ]; then
-  cp ${CONFIG_DIR}/php/php.ini /etc/php7/conf.d/zz_custom.ini
+  cp ${CONFIG_DIR}/php/php.ini /etc/php82/conf.d/zz_custom.ini
 fi
 
 chown http:http /web
